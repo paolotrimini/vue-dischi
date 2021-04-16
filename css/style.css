@@ -1,17 +1,40 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
 body {
-    background-color: darkgoldenrod;
-    color: white;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    /*debug*/
+    background-color: darkorange;
+
 }
 
-
-.img-box {
-    width: 150px;
-    height: 200px;
+.head-bar {
+    text-align: center;
+    margin-top: 20px;
     /*debug*/
-    background-color: greenyellow;
+   /* background-color: hotpink;*/
+}
+
+.albums-box {
+    margin: 10px;
+    padding: 20px;
+}
+
+.album-information {
+    text-align: center;
+    margin-top: 10px;
+    /*debug*/
+   /* background-color: red;*/
+}
+
+.album-information span {
+    font-weight: bold;
+}
+
+.container img {
+    width: 100%;
 }
