@@ -9,7 +9,11 @@ body {
     color: black;
     /*debug*/
     background-color: darkorange;
+}
 
+.main-container {
+    /*debug*/
+    /*background-color: red;*/
 }
 
 .head-bar {
@@ -34,7 +38,7 @@ body {
 .album-information span {
     font-weight: bold;
 }
-
 .container img {
     width: 100%;
 }
+

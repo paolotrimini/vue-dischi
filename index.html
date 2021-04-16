@@ -22,50 +22,51 @@
 </head>
 <body>
 
-<div id="app">
+  <div id="app" class="container">
+      <div class="row">
 
-  <div class="container">
-    <div class="row">
-      <div class="col-12 head-bar">
-        <div>
-          <h1>Albums</h1>
-        </div>
+        <!-- HEADER -->
 
-        <div class="bar-search">
-          <select v-model="albumGenre" name="">
-            <option value="">Generi dei dischi</option>
-            <option v-for="genre in orderGenre">
-              {{ genre }}
-            </option>
-          </select>
-        </div>
-
-      </div>
-      <div class="col-lg-3 col-md-6"
-           v-for="disco in myAlbums(albums)"
-           v-if="disco.genre.toLowerCase().includes(albumGenre.toLowerCase())">
-        <div class="albums-box">
-          <div class="poster-box">
-            <img :src="disco.poster" :alt="disco.title">
+        <div class="col-12 head-bar">
+          <div>
+            <h1>Albums</h1>
           </div>
-          <div class="album-information">
-              <div class="box-title">
-                <h3>{{ disco.title }}</h3>
-              </div>
-              <div>
-                <p><span>Author:</span> {{ disco.author }}</p>
-              </div>
-              <div>
-                <p><span>Genre:</span> {{ disco.genre }}</p>
-              </div>
-              <div>
-                <p><span>Year: </span>{{ disco.year }}</p>
-              </div>
-          </div> <!-- fine album information -->
+          <div class="bar-search">
+            <select v-model="albumGenre" name="">
+              <option value="">Generi dei dischi</option>
+              <option v-for="genre in orderGenre">
+                {{ genre }}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <!-- MAIN-->
+
+        <div class="col-lg-3 col-md-6 main-container"
+             v-for="disco in myAlbums(albums)"
+             v-if="disco.genre.toLowerCase().includes(albumGenre.toLowerCase())">
+          <div class="albums-box">
+            <div class="poster-box">
+              <img :src="disco.poster" :alt="disco.title">
+            </div>
+            <div class="album-information">
+                <div class="box-title">
+                  <h3>{{ disco.title }}</h3>
+                </div>
+                <div>
+                  <p><span>Author:</span> {{ disco.author }}</p>
+                </div>
+                <div>
+                  <p><span>Genre:</span> {{ disco.genre }}</p>
+                </div>
+                <div>
+                  <p><span>Year: </span>{{ disco.year }}</p>
+                </div>
+            </div> <!-- fine album information -->
+          </div>
         </div>
       </div>
-    </div>
   </div>
-</div>
 </body>
 </html>
