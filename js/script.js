@@ -20,8 +20,8 @@
 
             methods: {
                 // BONUS 2: Ordinare i dischi per anno di uscita.
-                myAlbums(albumList){
-                    return albumList.slice().sort((a, b) => parseInt(a.year)  - parseInt(b.year) );
+                myAlbums: function(albumList){
+                    return albumList.sort((a, b) => parseInt(a.year)  - parseInt(b.year) );
                 }
             },
 
