@@ -44,25 +44,25 @@
         <!-- MAIN-->
 
         <div class="col-lg-3 col-md-6 main-container"
-             v-for="disco in myAlbums(albums)"
-             v-if="disco.genre.toLowerCase().includes(albumGenre.toLowerCase())">
+             v-for="album in myAlbums(albums)"
+             v-if="album.genre.toLowerCase().includes(albumGenre.toLowerCase())">
           <div class="albums-box">
             <div class="poster-box">
-              <img :src="disco.poster" :alt="disco.title">
+              <img :src="album.poster" :alt="album.title">
             </div>
               <!-- sezione informazioni ALBUMS -->
             <div class="album-information">
                 <div class="box-title">
-                  <h3>{{ disco.title }}</h3>
+                  <h3>{{ album.title }}</h3>
                 </div>
                 <div>
-                  <p><span>Author: </span>{{ disco.author }}</p>
+                  <p><span>Author: </span>{{ album.author }}</p>
                 </div>
                 <div>
-                  <p><span>Genre: </span>{{ disco.genre }}</p>
+                  <p><span>Genre: </span>{{ album.genre }}</p>
                 </div>
                 <div>
-                  <p><span>Year: </span>{{ disco.year }}</p>
+                  <p><span>Year: </span>{{ album.year }}</p>
                 </div>
             </div> <!-- fine album information -->
           </div>
